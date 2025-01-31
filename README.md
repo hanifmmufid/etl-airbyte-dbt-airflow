@@ -1,16 +1,19 @@
-# Hands On Materi Apache Airflow in Data Engineer Class - Basic
-This repository for course Data Engineer - Basic. In this course use tech stack :
-- Data Ingestion & Transformation : Python, SQL and Pandas
-- Workflow Orchestration : Apache Airflow
-- Data Platform : OLTP(PostgreSQL)
+# Modern Data Pipeline with Airbyte, dbt (Cosmos), and Airflow
 
-Prerequisite :
-- Already Install Docker Desktop for Windows OS or any docker software for Linux/Mac Os
-- Already install postgresql in local computer
-- Have knowledge Basic Docker & Docker Compose
+ETL pipeline integrating:
+- **Airbyte** for ingesting data from HTTP source to BigQuery
+- **dbt + Cosmos** for data transformations into data marts
+- **Airflow** as the orchestration engine
 
-Step by step to run Apache Airflow with use Docker
+## Architecture
+[HTTP API] → [Airbyte] → [BigQuery Raw] → [dbt + Cosmos] → [BigQuery Data Mart] → [Airflow DAG with Cosmos Task Group]
 
-1) Download latest docker compose airflow in [here](https://airflow.apache.org/docs/apache-airflow/2.9.3/docker-compose.yaml)
-2) Open docker-compose.yaml then add 1 parameter AIRFLOW__CORE__TEST_CONNECTION: 'Enabled' and update parameter AIRFLOW__CORE__LOAD__EXAMPLES become false
-3) Run docker compose up -d
+## Prerequisites
+- Google Cloud Project with BigQuery
+- BigQuery Service Account Key (JSON)
+- Python 3.8+
+- Docker & Docker Compose
+- Airbyte Open Source
+- dbt Core 1.5+
+- Apache Airflow 2.6+
+- Cosmos 1.2+
