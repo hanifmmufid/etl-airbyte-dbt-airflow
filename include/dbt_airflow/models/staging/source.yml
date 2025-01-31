@@ -1,0 +1,25 @@
+version: 2
+sources:
+  - name: my_project_dbt_3  # The dataset name in BigQuery
+    database: training-de-444307  # BigQuery Project ID
+    schema: my_project_dbt_3  # BigQuery Dataset
+    tables: 
+      - name: raw_products
+      - name: raw_orders
+      - name: raw_privileges
+      - name: raw_purchase_order_status
+      - name: raw_customer
+      - name: raw_order_details_status
+      - name: raw_purchase_orders
+      - name: raw_suppliers
+      - name: raw_invoices
+      - name: raw_purchase_order_details
+      - name: raw_strings
+      - name: raw_inventory_transaction_types
+      - name: raw_order_details
+      - name: raw_orders_status
+      - name: raw_shippers
+      - name: raw_inventory_transactions
+      - name: raw_orders_tax_status
+      - name: raw_employees
+      - name: raw_employee_privileges

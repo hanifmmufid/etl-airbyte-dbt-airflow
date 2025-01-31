@@ -1,0 +1,11 @@
+pandasql==0.7.3
+fastparquet==2024.5.0
+pyarrow==17.0.0
+jupyter==1.0.0
+apache-airflow-providers-airbyte
+requests
+python-dotenv
+dbt
+dbt-bigquery
+dbt-core
+astronomer-cosmos

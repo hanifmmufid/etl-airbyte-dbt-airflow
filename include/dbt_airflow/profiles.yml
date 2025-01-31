@@ -1,0 +1,14 @@
+fraud:
+  target: dev
+  outputs:
+    dev:
+      dataset: my_project_dbt_3
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /opt/airflow/include/dbt_airflow/training-de-444307-c3960dde7e1a.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: training-de-444307
+      threads: 4
+      type: bigquery

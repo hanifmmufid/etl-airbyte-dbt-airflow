@@ -1,0 +1,5 @@
+
+target/
+dbt_packages/
+logs/
+training-de-444307-c3960dde7e1a.json
